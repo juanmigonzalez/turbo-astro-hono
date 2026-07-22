@@ -4,9 +4,9 @@ A modern, production-ready monorepo starter template featuring **Astro** for the
 
 ## ✨ Features
 
-- ⚡ **Astro 5.8** - Lightning-fast static site generation with modern web standards
-- 🔥 **Hono 4.11.4** - Ultra-fast web framework for the Edge, Node.js, and more
-- 🏗️ **Turborepo 2.7** - High-performance build system for JavaScript and TypeScript monorepos
+- ⚡ **Astro 7.1** - Lightning-fast static site generation with modern web standards
+- 🔥 **Hono 4.12** - Ultra-fast web framework for the Edge, Node.js, and more
+- 🏗️ **Turborepo 2.10** - High-performance build system for JavaScript and TypeScript monorepos
 - 🔒 **Security First** - Built-in CORS and secure headers (Helmet-like) configuration
 - 📦 **pnpm Workspaces** - Efficient package management with shared dependencies
 - 🎨 **Shared Tooling** - ESLint, Prettier, and TypeScript configurations shared across projects
@@ -16,25 +16,25 @@ A modern, production-ready monorepo starter template featuring **Astro** for the
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **Astro** 5.8 - Modern static site framework
-- **TypeScript** 5.6.3 - Type-safe development
+- **Astro** 7.1 - Modern static site framework
+- **TypeScript** 6.0 - Type-safe development
 
 ### Backend
-- **Hono** 4.11.4 - Fast web framework
+- **Hono** 4.12 - Fast web framework
 - **@hono/node-server** - Node.js adapter for Hono
-- **TypeScript** 5.6.3 - Full type safety
+- **TypeScript** 6.0 - Full type safety
 
 ### Tooling
-- **Turborepo** 2.7 - Monorepo build system
-- **pnpm** 9.15.0 - Fast, disk space efficient package manager
-- **ESLint** 9.0 - Code linting
-- **Prettier** 3.2.5 - Code formatting
-- **TypeScript** 5.6.3 - Type checking
+- **Turborepo** 2.10 - Monorepo build system
+- **pnpm** 11.15 - Fast, disk space efficient package manager
+- **ESLint** 9.39 - Code linting
+- **Prettier** 3.9 - Code formatting
+- **TypeScript** 6.0 - Type checking
 
 ## 📋 Prerequisites
 
-- **Node.js** >= 22.0.0
-- **pnpm** >= 9.15.0
+- **Node.js** >= 24.0.0
+- **pnpm** >= 11.15.1
 
 If you use `nvm`, you can run:
 ```bash
