@@ -4,7 +4,13 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".astro/**", ".angular/**", "dist/**", ".next/**", "!.next/cache/**"]
+      "outputs": [
+        ".astro/**",
+        ".angular/**",
+        "dist/**",
+        ".next/**",
+        "!.next/cache/**"
+      ]
     },
     "dev": {
       "cache": false,
@@ -12,6 +18,9 @@
     },
     "lint": {
       "dependsOn": ["^lint"]
+    },
+    "test": {
+      "dependsOn": ["^test"]
     }
   }
 }
