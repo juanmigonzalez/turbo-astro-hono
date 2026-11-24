@@ -15,6 +15,7 @@ frontend and **Hono** for the backend API, orchestrated with **Turborepo**.
 - ⚙️ **Zero Config** - Pre-configured and ready to use out of the box
 - 🧪 **Node.js Test Runner** - Fast backend tests without another test framework
 - ✅ **GitHub Actions** - Automated lint, test, and build checks
+- 🤖 **Agent Harness** - Astro-aware repository contracts, executable guardrails, and one local/CI verification gate
 
 ## 🛠️ Tech Stack
 
@@ -32,7 +33,7 @@ frontend and **Hono** for the backend API, orchestrated with **Turborepo**.
 ### Tooling
 
 - **Turborepo** 2.10 - Monorepo build system
-- **pnpm** 11.26 - Fast, disk space efficient package manager
+- **pnpm** 12.4 - Fast, disk space efficient package manager
 - **ESLint** 10 - Code linting
 - **Prettier** 3.9 - Code formatting
 - **TypeScript** 6.0 - Type checking
@@ -108,6 +109,20 @@ turbo-astro-hono/
 - `pnpm lint` - Run ESLint on all projects
 - `pnpm test` - Run all unit tests once
 - `pnpm format` - Format code with Prettier
+- `pnpm verify:fast` - Run peer, architecture, lint, and API checks while iterating
+- `pnpm verify` - Run the complete local and CI quality gate
+
+## 🤖 AI agent harness
+
+The template includes a product-agnostic harness for content-driven websites:
+
+- [`AGENTS.md`](AGENTS.md) defines the working contract, Astro rendering defaults, boundaries, safety rules, and definition of done.
+- [`docs/architecture.md`](docs/architecture.md) separates stable Astro + Hono decisions from product and editorial choices.
+- [`docs/product-context.md`](docs/product-context.md) captures the audience, content model, information architecture, SEO contract, and constraints for each site.
+- `pnpm verify` is the shared readiness contract for humans, agents, and GitHub Actions.
+- `scripts/check-architecture.mjs` turns critical app boundaries and secret-file rules into executable checks.
+
+When starting a site, fill in `docs/product-context.md` first. Add nested `AGENTS.md` files only when a directory needs stricter local guidance.
 
 ### Frontend (Astro)
 

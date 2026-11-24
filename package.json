@@ -8,15 +8,20 @@
   },
   "scripts": {
     "build": "turbo run build",
+    "check:architecture": "node scripts/check-architecture.mjs",
+    "check:peers": "pnpm peers check",
     "dev": "turbo run dev",
+    "format:check": "prettier --check \"**/*.{ts,tsx,html,css,md,mdx,astro,json,mjs,yml,yaml}\"",
     "lint": "turbo run lint",
     "test": "turbo run test",
-    "format": "prettier --write \"**/*.{ts,tsx,html,css,md,astro,json}\""
+    "format": "prettier --write \"**/*.{ts,tsx,html,css,md,mdx,astro,json,mjs,yml,yaml}\"",
+    "verify:fast": "pnpm check:peers && pnpm check:architecture && pnpm lint && pnpm test",
+    "verify": "pnpm format:check && pnpm verify:fast && pnpm build"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@emnapi/core": "^1.11.3",
     "@emnapi/runtime": "^1.11.3",
-    "@eslint/js": "^10.0.1",
     "@types/node": "^24.19.2",
     "eslint": "^10.15.0",
     "eslint-plugin-astro": "^3.2.1",
@@ -26,5 +31,5 @@
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.73.0"
   },
-  "packageManager": "pnpm@11.26.0"
+  "packageManager": "pnpm@12.4.2"
 }
