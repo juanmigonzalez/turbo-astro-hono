@@ -11,7 +11,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "astro": "^7.3.0"
+    "astro": "^7.3.2"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10"
